@@ -1,0 +1,391 @@
+/* Importación de Font Awesome */
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+/* Estilos Generales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+  background-color: transparent;
+  padding: 1rem 0;
+  transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: rgba(33, 37, 41, 0.95);
+}
+
+.navbar-brand .black {
+  color: #ffffff;
+}
+
+.navbar-brand .green {
+  color: #56ab63;
+}
+
+.navbar-brand .orange {
+  color: orange;
+}
+
+.navbar .nav-link {
+  color: #ffffff;
+  margin-right: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #56ab63;
+}
+
+/* Hero Section */
+.hero-section {
+  background: url('./assets/images/eq.jpg') no-repeat center center/cover;
+  height: 100vh;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: fadeInDown 1s ease;
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease;
+}
+
+.hero-section .btn {
+  font-size: 1.2rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  background-color: #56ab63;
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.hero-section .btn:hover {
+  background-color: #469353;
+}
+
+/* About Section */
+.about-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.about-section h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+}
+
+.about-section h2::after {
+  content: '';
+  width: 50px;
+  height: 5px;
+  background: #56ab63;
+  display: block;
+  margin: 0.5rem auto;
+}
+
+.about-section p {
+  color: #555;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+/* Products Section */
+.products-section {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.products-section h2 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.products-section h2::after {
+  content: '';
+  width: 50px;
+  height: 5px;
+  background: #56ab63;
+  display: block;
+  margin: 0.5rem auto;
+}
+
+.products-section .card {
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff;
+}
+
+.products-section .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.products-section .card-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.products-section .card-text {
+  color: #666;
+}
+
+/* Promotions Section */
+.promo-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.promo-section h2 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.promo-section h2::after {
+  content: '';
+  width: 50px;
+  height: 5px;
+  background: #56ab63;
+  display: block;
+  margin: 0.5rem auto;
+}
+
+.promo-section .card {
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.promo-section .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.promo-section .card img {
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.promo-section .card:hover img {
+  transform: scale(1.05);
+}
+
+.promo-section .card-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.promo-section .card-text {
+  color: #666;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.contact-section h2 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.contact-section h2::after {
+  content: '';
+  width: 50px;
+  height: 5px;
+  background: #56ab63;
+  display: block;
+  margin: 0.5rem auto;
+}
+
+.contact-section .form-control {
+  border-radius: 50px;
+  border: 1px solid #ddd;
+  padding: 1rem;
+}
+
+.contact-section .btn {
+  font-size: 1.2rem;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  background-color: #56ab63;
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.contact-section .btn:hover {
+  background-color: #469353;
+}
+
+/* Footer */
+footer {
+  background: #212529;
+  color: white;
+  padding: 40px 0;
+}
+
+footer .row > div {
+  margin-bottom: 1.5rem;
+}
+
+footer h5 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+footer p,
+footer a {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+footer .social-icons a {
+  font-size: 1.5rem;
+  color: #ccc;
+  margin-right: 1rem;
+  transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+  color: #56ab63;
+}
+
+footer hr {
+  border-top: 1px solid #444;
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ajustes Responsivos */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section p {
+    font-size: 1.2rem;
+  }
+
+  .navbar .nav-link {
+    margin-right: 0;
+  }
+}
+
+
+
+/* Social Icons */
+.social-icon {
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icon.facebook {
+  color: #1877f2; /* Azul de Facebook */
+}
+
+.social-icon.facebook:hover {
+  color: #145dbf;
+}
+
+.social-icon.instagram {
+  color: #e4405f; /* Rosa de Instagram */
+}
+
+.social-icon.instagram:hover {
+  color: #bc2a8d;
+}
+
+.social-icon.twitter {
+  color: #1da1f2; /* Azul de Twitter */
+}
+
+.social-icon.twitter:hover {
+  color: #0d8bec;
+}
+
+.social-icon.gmail {
+  color: #f1bd12; /* Rojo de Gmail */
+}
+
+.social-icon.gmail:hover {
+  color: #b1271b;
+}
+
+
